@@ -1,0 +1,14 @@
+version: "3"
+services:
+  transmission-twc:
+    image: winter0mute/docker-transmission-twc
+    ports:
+            - "9091:9091"
+            - "51413:51413"
+    volumes:
+            - /local/downloads:/srv/downloads
+            - transmission-data:/etc/transmission-daemon
+    environment:
+            - TZ=Europe/Budapest
+volumes:
+  transmission-data:
