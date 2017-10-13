@@ -7,8 +7,6 @@ services:
             - "51413:51413"
     volumes:
             - /local/downloads:/srv/downloads
-            - transmission-data:/etc/transmission-daemon
+            - /docker_etc/transmission-data:/etc/transmission-daemon
     environment:
             - TZ=Europe/Budapest
-volumes:
-  transmission-data:
